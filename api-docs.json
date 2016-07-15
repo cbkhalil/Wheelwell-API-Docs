@@ -1,0 +1,430 @@
+{
+	"title": "Wheelwell API",
+	"groups": [
+		{
+			"title": "Authentication",
+			"description": "This is a description.",
+			"endpoints": [
+				{
+					"title": "Register",
+					"description": "The registration endpoint generates a user account within Wheelwell using a local strategy.",
+					"method": "POST",
+					"path": "/auth/register",
+					"example_request_body": {
+					    "username": "emailaddress@gmail.com",
+					    "password": "1234567",
+					    "first_name": "John",
+					    "last_name": "Doe"
+					},
+					"parameters": [
+						{
+							"key": "username",
+							"required": true,
+							"type": "String",
+							"description": "The user's email address."
+						},
+						{
+							"key": "password",
+							"required": true,
+							"type": "String",
+							"description": "The user's password. Minimum 7 character length."
+						},
+						{
+							"key": "first_name",
+							"required": true,
+							"type": "String",
+							"description": "The user's first name."
+						},
+						{
+							"key": "last_name",
+							"required": true,
+							"type": "String",
+							"description": "The user's last name."
+						}
+					],
+					"example_response": {
+					    "profile": {
+					        "_id": "5776a46ff6b3b78d4326a3aa",	        
+					        "first_name": "John",							        
+					        "last_name": "Doe",							        
+					        "name": "John Doe"
+					    },
+
+					    "is_new_user": true,
+					    "auth_tokens": {
+					        "access_token": "someaccesstoken",
+					        "access_token_expires_in": 900,
+					        "refresh_token": "somerefreshtoken",
+					        "refresh_token_expires_in": 15768000,
+					        "token_type": "Bearer"
+					    }
+					},
+					"errors": [
+						{
+							"key": "NO_USERNAME",
+						 	"message": "Username missing from post body.",
+						 	"code": 400
+						},
+						{
+							"key": "INVALID_USERNAME",
+						 	"message": "Username must be and email address.",
+						 	"code": 400
+						},
+						{
+							"key": "USERNAME_CONFLICT",
+						 	"message": "Username already exists.",
+						 	"code": 400
+						},
+						{	
+							"key": "NO_PASSWORD", 
+							"message": "Password missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "SHORT_PASSWORD", 
+							"message": "Password must be at least 7 characters in length.", 
+							"code": 400
+						},
+						{	
+							"key": "NO_FIRST_NAME", 
+							"message": "First Name missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "NO_LAST_NAME", 
+							"message": "Last Name missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "SERVER_ERROR", 
+							"message": "Server error.", 
+							"code": 500
+						}
+					]
+				},
+
+				{
+					"title": "Login",
+					"description": "The registration endpoint generates a user account within Wheelwell using a local strategy.",
+					"method": "POST",
+					"path": "/auth/register",
+					"example_request_body": {
+					    "username": "emailaddress@gmail.com",
+					    "password": "1234567",
+					    "first_name": "John",
+					    "last_name": "Doe"
+					},
+					"parameters": [
+						{
+							"key": "username",
+							"required": true,
+							"type": "String",
+							"description": "The user's email address."
+						},
+						{
+							"key": "password",
+							"required": true,
+							"type": "String",
+							"description": "The user's password. Minimum 7 character length."
+						},
+						{
+							"key": "first_name",
+							"required": true,
+							"type": "String",
+							"description": "The user's first name."
+						},
+						{
+							"key": "last_name",
+							"required": true,
+							"type": "String",
+							"description": "The user's last name."
+						}
+					],
+					"example_response": {
+					    "profile": {
+					        "_id": "5776a46ff6b3b78d4326a3aa",	        
+					        "first_name": "John",							        
+					        "last_name": "Doe",							        
+					        "name": "John Doe"
+					    },
+
+					    "is_new_user": true,
+					    "auth_tokens": {
+					        "access_token": "someaccesstoken",
+					        "access_token_expires_in": 900,
+					        "refresh_token": "somerefreshtoken",
+					        "refresh_token_expires_in": 15768000,
+					        "token_type": "Bearer"
+					    }
+					},
+					"errors": [
+						{
+							"key": "NO_USERNAME",
+						 	"message": "Username missing from post body.",
+						 	"code": 400
+						},
+						{
+							"key": "INVALID_USERNAME",
+						 	"message": "Username must be and email address.",
+						 	"code": 400
+						},
+						{
+							"key": "USERNAME_CONFLICT",
+						 	"message": "Username already exists.",
+						 	"code": 400
+						},
+						{	
+							"key": "NO_PASSWORD", 
+							"message": "Password missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "SHORT_PASSWORD", 
+							"message": "Password must be at least 7 characters in length.", 
+							"code": 400
+						},
+						{	
+							"key": "NO_FIRST_NAME", 
+							"message": "First Name missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "NO_LAST_NAME", 
+							"message": "Last Name missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "SERVER_ERROR", 
+							"message": "Server error.", 
+							"code": 500
+						}
+					]
+				}
+			]
+		},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		{
+			"title": "Users",
+			"description": "This is a description.",
+			"endpoints": [
+				{
+					"title": "Me",
+					"description": "The registration endpoint generates a user account within Wheelwell using a local strategy.",
+					"method": "POST",
+					"path": "/auth/register",
+					"example_request_body": {
+					    "username": "emailaddress@gmail.com",
+					    "password": "1234567",
+					    "first_name": "John",
+					    "last_name": "Doe"
+					},
+					"parameters": [
+						{
+							"key": "username",
+							"required": true,
+							"type": "String",
+							"description": "The user's email address."
+						},
+						{
+							"key": "password",
+							"required": true,
+							"type": "String",
+							"description": "The user's password. Minimum 7 character length."
+						},
+						{
+							"key": "first_name",
+							"required": true,
+							"type": "String",
+							"description": "The user's first name."
+						},
+						{
+							"key": "last_name",
+							"required": true,
+							"type": "String",
+							"description": "The user's last name."
+						}
+					],
+					"example_response": {
+					    "profile": {
+					        "_id": "5776a46ff6b3b78d4326a3aa",	        
+					        "first_name": "John",							        
+					        "last_name": "Doe",							        
+					        "name": "John Doe"
+					    },
+
+					    "is_new_user": true,
+					    "auth_tokens": {
+					        "access_token": "someaccesstoken",
+					        "access_token_expires_in": 900,
+					        "refresh_token": "somerefreshtoken",
+					        "refresh_token_expires_in": 15768000,
+					        "token_type": "Bearer"
+					    }
+					},
+					"errors": [
+						{
+							"key": "NO_USERNAME",
+						 	"message": "Username missing from post body.",
+						 	"code": 400
+						},
+						{
+							"key": "INVALID_USERNAME",
+						 	"message": "Username must be and email address.",
+						 	"code": 400
+						},
+						{
+							"key": "USERNAME_CONFLICT",
+						 	"message": "Username already exists.",
+						 	"code": 400
+						},
+						{	
+							"key": "NO_PASSWORD", 
+							"message": "Password missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "SHORT_PASSWORD", 
+							"message": "Password must be at least 7 characters in length.", 
+							"code": 400
+						},
+						{	
+							"key": "NO_FIRST_NAME", 
+							"message": "First Name missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "NO_LAST_NAME", 
+							"message": "Last Name missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "SERVER_ERROR", 
+							"message": "Server error.", 
+							"code": 500
+						}
+					]
+				},
+
+				{
+					"title": "Create User",
+					"description": "The registration endpoint generates a user account within Wheelwell using a local strategy.",
+					"method": "POST",
+					"path": "/auth/register",
+					"example_request_body": {
+					    "username": "emailaddress@gmail.com",
+					    "password": "1234567",
+					    "first_name": "John",
+					    "last_name": "Doe"
+					},
+					"parameters": [
+						{
+							"key": "username",
+							"required": true,
+							"type": "String",
+							"description": "The user's email address."
+						},
+						{
+							"key": "password",
+							"required": true,
+							"type": "String",
+							"description": "The user's password. Minimum 7 character length."
+						},
+						{
+							"key": "first_name",
+							"required": true,
+							"type": "String",
+							"description": "The user's first name."
+						},
+						{
+							"key": "last_name",
+							"required": true,
+							"type": "String",
+							"description": "The user's last name."
+						}
+					],
+					"example_response": {
+					    "profile": {
+					        "_id": "5776a46ff6b3b78d4326a3aa",	        
+					        "first_name": "John",							        
+					        "last_name": "Doe",							        
+					        "name": "John Doe"
+					    },
+
+					    "is_new_user": true,
+					    "auth_tokens": {
+					        "access_token": "someaccesstoken",
+					        "access_token_expires_in": 900,
+					        "refresh_token": "somerefreshtoken",
+					        "refresh_token_expires_in": 15768000,
+					        "token_type": "Bearer"
+					    }
+					},
+					"errors": [
+						{
+							"key": "NO_USERNAME",
+						 	"message": "Username missing from post body.",
+						 	"code": 400
+						},
+						{
+							"key": "INVALID_USERNAME",
+						 	"message": "Username must be and email address.",
+						 	"code": 400
+						},
+						{
+							"key": "USERNAME_CONFLICT",
+						 	"message": "Username already exists.",
+						 	"code": 400
+						},
+						{	
+							"key": "NO_PASSWORD", 
+							"message": "Password missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "SHORT_PASSWORD", 
+							"message": "Password must be at least 7 characters in length.", 
+							"code": 400
+						},
+						{	
+							"key": "NO_FIRST_NAME", 
+							"message": "First Name missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "NO_LAST_NAME", 
+							"message": "Last Name missing from post body.", 
+							"code": 400
+						},
+						{	
+							"key": "SERVER_ERROR", 
+							"message": "Server error.", 
+							"code": 500
+						}
+					]
+				}
+			]
+		}
+
+
+
+
+	]	
+}
+	

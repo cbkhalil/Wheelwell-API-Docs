@@ -1,0 +1,30 @@
+{
+  "name": "wheelwellapi",
+  "version": "1.0.0",
+  "description": "Static documentation of api for developers",
+  "main": "server.js",
+  "scripts": {
+    "server": "node server.js",
+    "dev": "nodemon server --ignore node_modules/",
+    "start": "node server.js"
+  },
+  "author": "Christine Khalil",
+  "dependencies": {
+    "express": "^4.13.4",
+    "pug": "^2.0.0-beta3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-inline": "^0.1.1",
+    "gulp-inline-css": "^3.1.0",
+    "gulp-jade": "^1.1.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^1.5.4",
+    "nodemon": "^1.9.2"
+  },
+  "license": "ISC"
+}

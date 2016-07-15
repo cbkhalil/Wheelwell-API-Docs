@@ -1,0 +1,86 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		title Wheelwell Auth API v1.2
+		link(rel='stylesheet', href='reset.css')
+		link(rel='stylesheet', href='stylesheet.css')
+		link(rel='stylesheet', href='prism.css')
+		link(rel='stylesheet', href='style.min.css')
+		script(src='prism.js')
+		script(src='script.min.js')
+		// inject:head:css 
+		// endinject 
+	body
+		svg(xmlns='http://www.w3.org/2000/svg', version='1.1', x='0', y='0', viewbox='0 0 588.7 100.3', xml:space='preserve', style='display:none;')
+			symbol#ww-logo-long(viewbox='0 0 588.7 100.3')
+				path(d='M138.7 31.3c-10.3 0-18.8 8.4-18.8 18.8s8.4 18.8 18.8 18.8c10.3 0 18.8-8.4 18.8-18.8s-8.5-18.8-18.8-18.8zm.1 35.8c-9.3 0-16.9-7.6-16.9-16.9s7.6-16.9 16.9-16.9 16.9 7.6 16.9 16.9-7.6 16.9-16.9 16.9z')
+				path(d='M138.8 4.2H1.4l30.3 22.4h67.8c-.9 1.5-1.7 3.1-2.4 4.7H38.2l30.3 22.3h24.7c.1 1.6.4 3.3.7 4.8H75.1l29.6 21.8c8.4 9.4 20.6 15.3 34.1 15.3 25.2 0 45.7-20.5 45.7-45.7 0-25.1-20.5-45.5-45.7-45.6zm-.2 68.9c-12.8 0-23.2-10.4-23.2-23.2s10.4-23.2 23.2-23.2c12.8 0 23.2 10.4 23.2 23.2s-10.3 23.2-23.2 23.2z')
+				g
+					path(d='M255.1 66.8l-11-32.5H234l-10.4 32.5-9.7-32.5h-11l15.2 46.5h10.1l10.6-32.7 11.6 32.7h9.5l15-46.5h-10.5M312.3 37.5c-1.6-1.5-3.4-2.5-5.5-3.2-2.1-.7-4.2-1-6.4-1-3.6 0-6.8.8-9.6 2.3-2.1 1.2-3.7 2.6-4.8 4.3V7.5h-9.9v73.3h9.9V56.9c0-2.5.3-4.7.9-6.6.6-1.8 1.5-3.3 2.5-4.5 1.1-1.2 2.3-2 3.8-2.5 2.5-.9 5.6-1.1 8.4-.2 1.1.4 2.2 1 3 1.9.9.9 1.6 2 2.1 3.4s.8 3.1.8 5.2v27.3h9.9V51.1c0-3.1-.5-5.7-1.4-8-.9-2.3-2.2-4.2-3.7-5.6zM363 41c-1.8-2.3-4.2-4.2-7-5.7-2.8-1.4-6.4-2.2-10.4-2.2-3.4 0-6.7.6-9.6 1.9-2.9 1.2-5.5 3-7.6 5.1-2.1 2.2-3.8 4.8-5 7.7-1.2 3-1.8 6.2-1.8 9.6 0 3.4.6 6.7 1.7 9.6 1.1 3 2.7 5.6 4.8 7.7 2.1 2.2 4.6 3.9 7.6 5.2 3 1.2 6.3 1.9 9.9 1.9 8.7 0 15.6-3.2 20.5-9.5l.4-.5-7.5-5.7-.4.5c-1.6 2-3.4 3.6-5.3 4.8-1.9 1.2-4.1 1.8-6.6 1.8-1.9 0-3.7-.3-5.5-.9-1.8-.6-3.3-1.5-4.7-2.6-1.3-1.1-2.4-2.4-3.2-3.9-.7-1.3-1.1-2.8-1.2-4.4h36.2v-3.7c0-3-.4-5.9-1.2-8.8-.9-2.9-2.2-5.6-4.1-7.9zm-17.6.3c2.1 0 3.9.3 5.4 1 1.5.6 2.8 1.5 3.8 2.6s1.8 2.4 2.3 3.9c.5 1.3.7 2.8.8 4.4H332c.1-1.2.4-2.5.9-3.7.6-1.5 1.5-2.8 2.7-4 1.1-1.2 2.6-2.2 4.2-3 1.8-.8 3.6-1.2 5.6-1.2zM411.2 41c-1.8-2.3-4.2-4.2-7-5.7-2.8-1.4-6.4-2.2-10.4-2.2-3.4 0-6.7.6-9.6 1.9-2.9 1.2-5.5 3-7.6 5.1-2.1 2.2-3.8 4.8-5 7.7-1.2 2.9-1.8 6.2-1.8 9.6 0 3.4.6 6.7 1.7 9.6 1.1 3 2.7 5.6 4.8 7.7 2.1 2.2 4.6 3.9 7.6 5.2 3 1.2 6.3 1.9 9.9 1.9 8.7 0 15.6-3.2 20.5-9.5l.4-.5-7.5-5.7-.4.5c-1.6 2-3.4 3.6-5.3 4.8-1.9 1.2-4.1 1.8-6.6 1.8-1.9 0-3.7-.3-5.5-.9-1.8-.6-3.3-1.5-4.7-2.6-1.3-1.1-2.4-2.4-3.2-3.9-.7-1.3-1.1-2.8-1.2-4.4h36.2v-3.7c0-3-.4-5.9-1.2-8.8-.9-2.9-2.2-5.6-4.1-7.9zm-17.6.3c2.1 0 3.9.3 5.4 1 1.5.6 2.8 1.5 3.8 2.6s1.8 2.4 2.3 3.9c.5 1.3.7 2.8.8 4.4h-25.7c.1-1.2.4-2.5.9-3.7.6-1.5 1.5-2.8 2.7-4 1.1-1.2 2.6-2.2 4.2-3 1.8-.8 3.6-1.2 5.6-1.2zM421.3 7.5h9.9v73.3h-9.9zM494.6 34.3l-9.2 32.5-11-32.5h-10.1l-10.4 32.5-9.7-32-.1-.5h-11l15.1 46 .2.5h10.1L469 48.1l11.6 32.7h9.6l15-46.5M545.1 41c-1.8-2.3-4.2-4.2-7-5.7-2.8-1.4-6.4-2.2-10.4-2.2-3.4 0-6.7.6-9.6 1.9-2.9 1.2-5.5 3-7.6 5.1-2.1 2.2-3.8 4.8-5 7.7-1.2 2.9-1.8 6.2-1.8 9.6 0 3.4.6 6.7 1.7 9.6 1.1 3 2.7 5.6 4.8 7.7 2.1 2.2 4.6 3.9 7.6 5.2 3 1.2 6.3 1.9 9.9 1.9 8.7 0 15.6-3.2 20.5-9.5l.4-.5-7.5-5.7-.4.5c-1.6 2-3.4 3.6-5.3 4.8-1.9 1.2-4.1 1.8-6.6 1.8-1.9 0-3.7-.3-5.5-.9-1.8-.6-3.3-1.5-4.7-2.6-1.3-1.1-2.4-2.4-3.2-3.9-.7-1.3-1.1-2.8-1.2-4.4h36.2v-3.7c0-3-.4-5.9-1.2-8.8-1-2.9-2.3-5.6-4.1-7.9zm-17.7.3c2.1 0 3.9.3 5.4 1 1.5.6 2.8 1.5 3.8 2.6s1.8 2.4 2.3 3.9c.5 1.3.7 2.8.8 4.4H514c.1-1.2.4-2.5.9-3.7.6-1.5 1.5-2.8 2.7-4 1.1-1.2 2.6-2.2 4.2-3 1.8-.8 3.6-1.2 5.6-1.2zM555.2 7.5h9.9v73.3h-9.9zM573.3 7.5h9.9v73.3h-9.9z')
+		header
+			a(href='https://wheelwell.com')
+				svg.wheelwell-logo
+					use(xmlns:xlink='http://www.w3.org/1999/xlink', xlink:href='#ww-logo-long')
+		
+
+		main
+
+			nav
+				ul
+					each group in groups
+						li.nav-text
+							a.maincategory-nav(href='#' + group.title) #{group.title}
+							ul
+								each endpoint in group.endpoints
+									li.nav-text
+										a.subcategory-nav(href='#' + endpoint.title) #{endpoint.title}
+			
+			div.content-container
+
+				div.tile-styling
+
+					h1.main-title #{title}
+					p.description-text
+						|This API represents a series of endpoints for creating, authenticating, and preserving authorization within the scope of the Wheelwell ecosystem.
+
+
+				each group in groups
+					div.section-anchor(id=group.title)
+					section.tile-styling
+						h1.group-title #{group.title}
+						//- p #{group.description}
+						each endpoint in group.endpoints
+							div.section-anchor(id=endpoint.title)
+							section.endpoint-section
+								h1.endpoint-title #{endpoint.title}
+								hr
+								p.description-text #{endpoint.description}
+								div.endpoint-details-container
+									section
+										h1.endpoint-details-title Request
+										pre.code-box-header
+											code.language-http #{endpoint.method} #{endpoint.path}
+										pre.line-numbers.code-box-body
+											code.language-json #{JSON.stringify(endpoint.example_request_body, null, 4)}   
+									section
+										h1.endpoint-details-title Parameters
+										dl.parameter-list
+											each parameter in endpoint.parameters							
+												dt
+													span.parameter #{parameter.key}
+													if parameter.required === true
+														small.required  required
+												dd.parameter-type
+													span #{parameter.type}
+													|  &mdash; #{parameter.description}
+												br
+									section
+										h1.endpoint-details-title Example Response
+										pre.line-numbers
+											code.language-json #{JSON.stringify(endpoint.example_response, null, 4)}          
+									section
+										h1.endpoint-details-title Errors
+										each error in endpoint.errors
+											pre.line-numbers
+												code.language-json #{JSON.stringify(error, null, 4)}
