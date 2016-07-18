@@ -45,11 +45,6 @@ main {
 }
 
 
-
-
-
-
-
 nav {
     position:fixed;
     top:60px;
@@ -140,6 +135,9 @@ nav {
 	font-weight: 500;
 }
 
+
+
+
 .endpoint-details-container{
 	padding-left: 20px;
 }
@@ -148,6 +146,9 @@ nav {
 	font-weight: 600;
 	padding: 10px 0 5px 0;
 }
+
+
+
 
 .parameter, .nav-text {
 	font-size: 18px;
@@ -188,7 +189,7 @@ nav {
 
 
 @media (max-width: 950px) {
-
+/* Keeps window centered between mobile and desktop widths */
 	.content-container{
 		float: none;
 		margin: 0 auto;
